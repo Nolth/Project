@@ -1,0 +1,79 @@
+package RoadWorker;
+import java.io.File;
+
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
+
+/**
+	* 
+	 * Lead Author(s):
+	 * @author This is great 1
+	 * @author 
+	 * <<add additional lead authors here, with a full first and last name>>
+	 * 
+	 * Other contributors:
+	 * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+	 * 
+	 * References:
+	 * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+	 * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+	 * 
+	 * Gaddis, T. (2015). Starting out with Java: From control structures through objects. Addison-Wesley. 
+	 * 
+	 * <<add more references here>>
+	 *  
+	 * Version/date: 
+	 * 
+	 * Responsibilities of class:
+	 * 
+	 */
+public class RoadWorkFile 
+{
+	public RoadWorkFile()
+	{
+		readTestResults();
+	}
+	
+	public String readTestResults()
+	{
+		System.out.println("");
+		System.out.println("Read Test Start");
+		//Scanner scan = null;
+		File inFile = new File("sd_paving_datasd(1).csv");
+		System.out.println("Test Infile: " + inFile);
+		if (inFile.exists())
+		{
+			System.out.println("File Exists");
+		}
+		else
+		{
+			System.out.println("");
+		}
+		Scanner scan = null;
+		System.out.println("Try");
+		try 
+		{
+			System.out.println("In Try");
+			scan = new Scanner(inFile);
+		}
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+		}
+		String content = "";
+		//Obtain content from the file as long as there is content to be obtained 
+		while(scan.hasNext())
+		{
+			//System.out.println("Test Content1: " + content);
+			String line = scan.nextLine();
+			//System.out.println("Test Line: " + line);
+			content += line;
+			content += scan.next();
+			//System.out.println("Test Content2: " + content);
+		}
+		System.out.println("Test Content3: " + content);
+		return content;
+	}
+}
