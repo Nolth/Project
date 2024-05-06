@@ -1,20 +1,52 @@
+package RoadWorker;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+
 /**
- * Lead Author(s): Thomas Woods
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
- * 
- * Other contributors: TBA
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
- * 
- * References: https://data.sandiego.gov/, 
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
- * 
- * <<add more references here>>
- *  
- * Version/date: V1:(4/20/2024 3:39)
- * 
- * Responsibilities of interface: Main code
- * 
- */
+	* 
+	 * Lead Author(s):
+	 * @author This is great 1
+	 * @author 
+	 * <<add additional lead authors here, with a full first and last name>>
+	 * 
+	 * Other contributors:
+	 * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+	 * 
+	 * References:
+	 * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+	 * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+	 * 
+	 * Gaddis, T. (2015). Starting out with Java: From control structures through objects. Addison-Wesley. 
+	 * 
+	 * <<add more references here>>
+	 *  
+	 * Version/date: 
+	 * 
+	 * Responsibilities of class:
+	 * 
+	 */
+public class RoadWork 
+{
+	public RoadWorkFile kk;
+//	public RoadWork()
+//	{
+//		System.out.println("Test: Hello");
+//	}
+	public RoadWork(RoadWorkFile kk)
+	{
+		this.kk = kk;
+		getSheet();
+	}
+	@Test
+	public void main()
+	{
+		new RoadWork(kk);
+	}
+	
+	public RoadWorkFile getSheet()
+	{
+		System.out.println("Test: " + kk);
+		kk.readTestResults();
+		return kk;
+	}
+}
