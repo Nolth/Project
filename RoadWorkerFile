@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
-
 /**
 	* 
 	 * Lead Author(s):
@@ -33,15 +32,17 @@ public class RoadWorkFile
 {
 	public RoadWorkFile()
 	{
+		//String results = RoadWorkFile.readTestResults("sd_paving_datasd (1).csv");
+		
 		readTestResults();
 	}
 	
-	public String readTestResults()
+	public static String readTestResults()
 	{
 		System.out.println("");
 		System.out.println("Read Test Start");
 		//Scanner scan = null;
-		File inFile = new File("sd_paving_datasd(1).csv");
+		File inFile = new File("sd_paving_datasd (1).csv");
 		System.out.println("Test Infile: " + inFile);
 		if (inFile.exists())
 		{
@@ -49,7 +50,7 @@ public class RoadWorkFile
 		}
 		else
 		{
-			System.out.println("");
+			System.out.println("No file");
 		}
 		Scanner scan = null;
 		System.out.println("Try");
