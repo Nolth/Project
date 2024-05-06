@@ -1,0 +1,17 @@
+package RoadWorker;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+
+
+public class StartRoadWork 
+{
+	public RoadWork Road;
+	private RoadWorkFile File;
+	@Test
+	public void main()
+	{
+		RoadWorkFile File = null;
+		System.out.println("TestFile: " + File);
+		new RoadWork(new RoadWorkFile());
+	}
+}
