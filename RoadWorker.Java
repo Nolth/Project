@@ -1,11 +1,12 @@
+
 package RoadWorker;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 
 /**
 	* 
-	 * Lead Author(s):
-	 * @author This is great 1
+	 * Lead Author(s): Thomas Woods
+	 * @author 
 	 * @author 
 	 * <<add additional lead authors here, with a full first and last name>>
 	 * 
@@ -20,33 +21,25 @@ import org.junit.Test;
 	 * 
 	 * <<add more references here>>
 	 *  
-	 * Version/date: 
+	 * Version/date: 5/6/2024
 	 * 
 	 * Responsibilities of class:
 	 * 
 	 */
 public class RoadWork 
 {
-	public RoadWorkFile kk;
-//	public RoadWork()
-//	{
-//		System.out.println("Test: Hello");
-//	}
+	private RoadWorkFile kk;
+	String File;
 	public RoadWork(RoadWorkFile kk)
 	{
+		System.out.println("Testkk: " + kk);
+		System.out.println("TestThis.kk: " + this.kk);
 		this.kk = kk;
-		getSheet();
-	}
-	@Test
-	public void main()
-	{
-		new RoadWork(kk);
+		getSheet(kk);
 	}
 	
-	public RoadWorkFile getSheet()
+	public void getSheet(RoadWorkFile kk)
 	{
-		System.out.println("Test: " + kk);
 		kk.readTestResults();
-		return kk;
 	}
 }
